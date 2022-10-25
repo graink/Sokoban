@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Permanent+Marker&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: crimson;
+    font-weight: bold;
+    font-size: medium;
+    background-color: #a6a5a5;
+    align-content: center;
+}
+
+/*background styling*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*container*/
+.container {
+    max-width: 70rem;
+    width: 100%;
+    padding: 2rem;
+    margin: auto;
+    /*position: absolute;*/
+    text-align: center;
+}
+
+.container h1 {
+    font-family: 'Aldrich','Permanent Marker', cursive;
+    color: crimson;
+    /*font-family: 'Roboto Slab', sans-serif;*/
+    font-size: 3.4rem;
+    text-align: center;
+    margin: 2rem 0;
+    /* color: #31cf1d; */
+}
+
+.container p {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+
+/* hint hover styling */
+
+.hint {
+    /*position: absolute;*/
+    background-color: crimson;
+    color: white;
+    position: relative;
+    display: inline-block;
+    border: 3px solid grey;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    font-size: 15px;
+    float: right;
+    background-image: url("../FinalProject/newBox.png")
+}
+
+.hint .hintText {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.hint .hintText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.hint:hover .hintText {
+    visibility: visible;
+    opacity: 1;
+}
+/*update margin values with the addition of levels*/
+.button {
+    background-color: crimson;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    font-family: 'Aldrich', 'Permanent Marker', cursive;
+   /*position: relative;*/
+    margin-left: 12%;
+    margin-right: 0%;
+}
+
+#canvas {
+    margin-top: 5px;
+    margin-left: 30px;
+
+}
+
+.final-msg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    max-width: 40rem;
+    width: 75%;
+    height: 20rem;
+    padding: 2rem;
+    line-height: 1.6;
+    margin: auto;
+    background-color: crimson;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+    /*display: flex;*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.final-msg.visible {
+    display: flex;
+}
+
+.final-msg p {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/*.final-msg .play {
+    font: inherit;
+    font-size: 1.6rem;
+    padding: 1.2rem;
+    cursor: pointer;
+    margin-top: 3rem;
+    background-color: crimson;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    outline: none;
+    transition: opacity 200ms ease-in;
+}*/
+
+@media (hover: hover) {
+    .final-msg .play:hover {
+        opacity: 0.75;
+    }
+}

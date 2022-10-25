@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOKOBAN</title>
+    <script src="grainneKaneProject.js"></script>
+    <link rel="stylesheet" href="grainneKaneProject.css" />
+</head>
+<body>
+
+<div class="container">
+<h1> SOKOBAN </h1>
+<h2> Use the arrow keys to summon and navigate your Sokoban.</h2>
+    <h2>Please select the level you would like to play</h2>
+    </br>
+
+    <input type="button" class="button" onclick="levelOne()" value="Level 1 " />
+    <input type="button" class="button" onclick="levelTwo()" value="Level 2" />
+    <input type="button" class="button" onclick="levelThree()" value="Level 3" />
+
+    <div class="hint"> LOST?
+        <span class="hintText">Your goal is to push the boxes onto the targets. </span>
+    </div>
+
+
+    <canvas width="500" height="500" id="canvas"></canvas>
+
+<div id="final-msg" style="font-size: 20px; font-weight: bold;"> </div>
+
+   <!--<div id="backdrop" class="backdrop"></div>
+    <div id="final-msg" class="final-msg">
+        <p id="msg-info" class="msg-info"></p>
+    </div>-->
+</div>
+</body>
+</html>
